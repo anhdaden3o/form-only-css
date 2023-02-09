@@ -1,0 +1,246 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    width: 300px;
+    height: 425px;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px #33333370;
+    border-radius: 10px;
+    position: relative;
+}
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.in-gr{
+    width: 90%;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid;
+    position: relative;
+    margin: 10px 0;
+}
+.in-gr .inp{
+    width: 80%;
+    left: 24px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.in-gr .pwd{
+    -webkit-text-security: disc;
+}
+.in-gr span{
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+    user-select: none;
+    touch-action: auto;
+    color: gray;
+    transition: .3s ease;
+    pointer-events: none;
+}
+.in-gr .inp:valid ~ span{ /* đưa chữ lên trên khi còn chữ */
+    top: -2px;
+    left: 10px;
+    background-color: #fff;
+}
+.in-gr .inp:focus ~ span{
+    top: -2px;
+    left: 10px;
+    background-color: #fff;
+}
+.in-gr .center{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+}.in-gr .checkop{
+    right: 8px;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+.in-gr #checkop:checked ~ .pwd{ /* check vào hiện mật khẩu */
+    -webkit-text-security:none;
+}
+.close{
+    display: none;
+}
+.in-gr #checkop:checked ~ .close{ /* hiện mắt đóng */
+    display: block;
+}
+.ic{
+    width: 16px;
+    height: 16px;
+}
+.ic-l{
+    left: 5px;
+}
+.ic-r{
+    right: 5px;
+}
+
+.link-r{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+.btn{
+    display: inline-block;
+    width: 90%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.btn-bl{
+    background-color: #007dff;
+    box-shadow: 0 5px 0px #007dff90;
+}
+
+.btn-bl:hover{
+    transform: translateY(5px);
+    box-shadow: none;
+}
+.btn-green{
+    background-color: #37de53;
+    box-shadow: 0 5px 8px #007dff80;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    position: relative;
+}
+hr{
+    width: 90%;
+    margin: 5px auto;
+}
+
+
+#ck{
+    display: none;
+}
+#ck:checked ~ .login {
+    transform: translateY(-290px);
+}
+#ck:checked ~ .login .bn{
+    font-size: 32px;
+    width: none;
+    height: none;
+    background-color: transparent;
+    color: #000;
+    transition: .5s ease;
+    pointer-events: none;
+}
+#ck:checked ~ .login .ic-x{
+    transform: translateY(0);
+    display: block;
+}
+#ck:checked ~ .more{
+    height: 90px;
+}
+.login{
+    margin-top: 20px;
+    transition: .5s ease;
+}
+.ic-x{
+    padding: 7px;
+    background-color: #929aab50;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    cursor: pointer;
+}
+.ic-x:hover{
+    background-color: #929aab90;
+}
+.regise{
+    background-color: #fff;
+}
+
+.btn-l{
+    display: inline-block;
+    width: 270px;
+    height: 40px;
+    background-color: aqua;
+    position: absolute;
+    top: 63.6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+.login .bn{
+    display: inline-block;
+    width: 90%;
+    height: 40px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #37de53;
+    cursor: pointer;
+}
+.more{
+    width: 90%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    z-index: 2;
+}
+.more-l{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.btn-lg{
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.btn-lg:hover:nth-child(1){
+    border: 1px solid linear-gradient ();
+}
+.btn-lg:hover:nth-child(2){
+    color: #007dff;
+    border: 1px solid #007dff;
+}
+.btn-lg:hover:nth-child(3){
+    color: #16a8fc;
+    border: 1px solid #16a8fc;
+}
